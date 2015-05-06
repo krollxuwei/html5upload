@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="jquery.html5uploader.js"></script>
+</head>
+<body>
+    <div id="upload" style="width:100px;height:100px;border:1px solid rgba(0,0,0,.7)"></div>
+</body>
+</html>
+
+<script>
+    window.onload = function(){
+        $('#upload').html5Uploader({
+                showProgress:true,
+                localPreview:true,
+                postUrl:"http://service.noahstrade.com/fileuploaderservice/media/UploadMedia?storage=testweixin&module=weibar_ballot&preview=width100&isAsync=true",
+                validOnBeforeClick:function(){
+                    console.log('123');
+                    return true;
+                },
+                onSuccess:function(data){
+                    alert(JSON.stringify(data));
+                }
+        } )
+
+    }
+</script>
