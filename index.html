@@ -16,7 +16,8 @@
         $('#upload').html5Uploader({
                 showProgress:true,
                 localPreview:true,
-                postUrl:"your upload server url",
+                accept:"image/*",
+                postUrl:"change your upload url",
                 validOnBeforeClick:function(){
                     console.log('123');
                     return true;

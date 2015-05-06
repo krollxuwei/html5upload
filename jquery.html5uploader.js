@@ -9,7 +9,7 @@
             "localPreview":false,//[本地预览] window.FileReader
 			"name": "uploadFileName",//[文件名]
 			"type": "single",//single 单选  multiple 多选  drag 拖拽
-            "accept":"",
+            "accept":"",//audio/*	可以接受所有的音频文件 video/*	可以接受所有的视频文件 image/*	可以接受所有的图片文件
 			"postUrl": "",//upload file path
             //本地加载相关事件  必须支持window.FileReader
 			"onClientAbort": null,
