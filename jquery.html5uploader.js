@@ -9,6 +9,7 @@
             "localPreview":false,//[本地预览] window.FileReader
 			"name": "uploadFileName",//[文件名]
 			"type": "single",//single 单选  multiple 多选  drag 拖拽
+            "accept":"",
 			"postUrl": "",//upload file path
             //本地加载相关事件  必须支持window.FileReader
 			"onClientAbort": null,
@@ -41,6 +42,7 @@
 				var input = document.createElement("input");
 				input.id = "__upload_input__";
 				input.type = "file";
+                input.accept = settings.accept;
 				input.style.cssText = "position:absolute;left:-10000px;top:-10000px;";
 				if (settings.type == "multiple") {
 					input.setAttribute("multiple", "multiple");
